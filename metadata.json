@@ -1,0 +1,8 @@
+{
+  "name": "Mashrafi's 18th Birthday Experience",
+  "description": "An ultra-premium, cinematic birthday celebration and photo reveal for Mashrafi's 18th birthday.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

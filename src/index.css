@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', Georgia, serif;
+    --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: var(--font-cinzel);
+}
+
+.font-cormorant {
+  font-family: var(--font-cormorant);
+}
+
+.font-sans-luxury {
+  font-family: var(--font-sans);
+}
+
+/* Gold Gradient Effects */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF6E5 0%, #F5C564 30%, #D4AF37 60%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-light {
+  background: linear-gradient(180deg, #FFFFFF 0%, #FFE8B5 40%, #E6BF65 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-shimmer {
+  background: linear-gradient(90deg, #E5BA5A 0%, #FFF7D6 25%, #ECC066 50%, #FFF7D6 75%, #E5BA5A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 5s ease-in-out infinite;
+}
+
+.border-gold-glow {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2), inset 0 0 15px rgba(212, 175, 55, 0.1);
+}
+
+.box-gold-glow {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.25), 0 0 80px rgba(212, 175, 55, 0.12);
+}
+
+.box-gold-glow-lg {
+  box-shadow: 0 0 60px rgba(212, 175, 55, 0.35), 0 0 120px rgba(212, 175, 55, 0.2);
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(1deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.04);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Light sweep effect across photograph */
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-light-sweep {
+  animation: lightSweep 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #05060a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.6);
+}
